@@ -9,7 +9,9 @@ proxy() {
     unset https_proxy
     unset all_proxy
     unset no_proxy
-    echo "Proxy disabled"
+    case "$-" in
+      *i*) echo "Proxy disabled" ;;
+    esac
     return
   fi
 
@@ -19,7 +21,9 @@ proxy() {
   export https_proxy="http://127.0.0.1:${port}"
   export all_proxy="socks5://127.0.0.1:${port}"
   export no_proxy="localhost,127.0.0.1,::1,*.local"
-  echo "Proxy enabled on port ${port}"
+  case "$-" in
+    *i*) echo "Proxy enabled on port ${port}" ;;
+  esac
 }
 
 if [ -n "${BASH_VERSION:-}" ]; then
