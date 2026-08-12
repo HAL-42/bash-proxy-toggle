@@ -16,12 +16,6 @@ After installing, open a new Bash session or source your Bash startup file:
 source ~/.bashrc
 ```
 
-On macOS login Bash sessions, you can also run:
-
-```bash
-source ~/.bash_profile
-```
-
 ## Usage
 
 Enable proxy on the default port `7890`:

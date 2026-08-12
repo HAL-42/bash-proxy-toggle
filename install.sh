@@ -55,12 +55,10 @@ main() {
   download "$source_url" "$install_file"
 
   write_startup_block "$HOME/.bashrc"
-  write_startup_block "$HOME/.bash_profile"
 
   echo "bash-proxy-toggle installed."
-  echo "Open a new Bash session, or run one of:"
+  echo "Open a new Bash session, or run:"
   echo "  source ~/.bashrc"
-  echo "  source ~/.bash_profile"
 }
 
 main "$@"
